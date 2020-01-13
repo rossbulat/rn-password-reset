@@ -52,10 +52,10 @@ export class PasswordForm extends React.Component<any, any> {
         {props => (
           <>
             <Error error={this.state.serverError} />
-            <Note note='Input new password.' />
+            <Note note='Successfully verified. Input a new password' />
             <TextInputWithIcon
               ionIcon='ios-lock'
-              name='passwprd'
+              name='password'
               autoCompleteType='password'
               onChangeText={props.handleChange('password')}
               onBlur={props.handleBlur('password')}
