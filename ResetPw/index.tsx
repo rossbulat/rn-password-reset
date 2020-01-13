@@ -19,13 +19,6 @@ export const ResetPw = (props: any) => {
   const [stage, setStage] = useState(stages.REQUEST_LINK);
   const [email, setEmail] = useState(null);
 
-  useEffect(() => {
-
-    if (props.token !== undefined) {
-      props.navigation.navigate('Home');
-    }
-  });
-
   const switchStage = (stage: string) => {
     setStage(stage);
   }
@@ -33,15 +26,10 @@ export const ResetPw = (props: any) => {
   return (
     <SafeAreaView style={styles.safeArea}>
       <KeyboardAwareScrollView contentContainerStyle={styles.scrollContainer}>
-        <View style={{ ...formStyles.container, }}>
-          <View>
-            <Text
-              style={{ marginBottom: 15, }}
-              heading
-              invertColor>
-              Reset Your Password
-              </Text>
-          </View>
+        <View style={formStyles.container}>
+          <Text>
+            Reset Your Password
+          </Text>
           {stage === stages.REQUEST_LINK &&
             <ResetForm
               navigation={props.navigation}

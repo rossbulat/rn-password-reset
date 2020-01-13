@@ -68,25 +68,16 @@ export class PasswordForm extends React.Component<any, any> {
               maxLength={100}
               editable={!props.isSubmitting}
             />
-
-            <View style={{
-              borderColor: '#ddd',
-              ...formStyles.submit,
-              marginTop: 30,
-            }}
-            >
+            <View style={formStyles.submit}>
               {this.state.submitting === true
                 ? <>
                   <Spinner />
-                  <Text style={formStyles.submitText} invertColor>
+                  <Text style={formStyles.submitText}>
                     Resetting Password
                   </Text>
                 </>
                 :
-                <Text
-                  style={formStyles.submitText} invertColor
-                  onPress={() => props.handleSubmit()}
-                >
+                <Text style={formStyles.submitText} onPress={() => props.handleSubmit()}>
                   {this.state.passwordReset === true
                     ? 'Password Successfully Reset'
                     : 'Reset Password'
@@ -95,10 +86,7 @@ export class PasswordForm extends React.Component<any, any> {
               }
             </View>
             <View style={{ marginTop: 10 }}>
-              <Text
-                onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}
-                invertColor
-              >
+              <Text onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}>
                 Enter a Different Email Address
               </Text>
             </View>

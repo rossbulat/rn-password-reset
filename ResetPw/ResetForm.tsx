@@ -59,27 +59,18 @@ export class ResetForm extends React.Component<any, any> {
               editable={!props.isSubmitting}
             />
 
-            <View style={{
-              borderColor: '#ccc',
-              ...formStyles.submit,
-              marginVertical: 30,
-            }}
-            >
+            <View style={formStyles.submit}>
               {this.state.submitting === true
                 ? <>
                   <Spinner />
-                  <Text style={formStyles.submitText} invertColor>
+                  <Text style={formStyles.submitText}>
                     Processing Request
                   </Text>
                 </>
                 :
-                <Text
-                  style={formStyles.submitText}
-                  onPress={() => props.handleSubmit()}
-                  invertColor
-                >
+                <Text style={formStyles.submitText} onPress={() => props.handleSubmit()}>
                   Request Reset Link
-              </Text>
+                </Text>
               }
             </View>
           </>

@@ -59,33 +59,22 @@ export class CodeForm extends React.Component<any, any> {
               editable={!props.isSubmitting}
             />
 
-            <View style={{
-              borderColor: '#ccc',
-              ...formStyles.submit,
-              marginTop: 30,
-            }}
-            >
+            <View style={formStyles.submit}>
               {this.state.submitting === true
                 ? <>
                   <Spinner />
-                  <Text style={formStyles.submitText} invertColor>
+                  <Text style={formStyles.submitText}>
                     Verifying Code
                   </Text>
                 </>
                 :
-                <Text
-                  style={formStyles.submitText} invertColor
-                  onPress={() => props.handleSubmit()}
-                >
+                <Text style={formStyles.submitText} onPress={() => props.handleSubmit()}>
                   Submit Code
-              </Text>
+                </Text>
               }
             </View>
             <View style={{ marginTop: 10 }}>
-              <Text
-                onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}
-                invertColor
-              >
+              <Text onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}>
                 Enter a Different Email Address
               </Text>
             </View>
