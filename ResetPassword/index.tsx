@@ -32,7 +32,6 @@ export const ResetPassword = (props: any) => {
           </Text>
           {stage === stages.REQUEST_LINK &&
             <ResetForm
-              navigation={props.navigation}
               stages={stages}
               switchStage={switchStage}
               setEmail={setEmail}
@@ -40,14 +39,12 @@ export const ResetPassword = (props: any) => {
           }
           {stage === stages.VERIFY &&
             <CodeForm
-              navigation={props.navigation}
               stages={stages}
               switchStage={switchStage}
             />
           }
           {stage === stages.RESET &&
             <PasswordForm
-              navigation={props.navigation}
               stages={stages}
               switchStage={switchStage}
               email={email}
