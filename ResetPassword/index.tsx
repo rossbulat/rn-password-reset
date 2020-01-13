@@ -8,7 +8,7 @@ import { ResetForm } from './ResetForm'
 import { CodeForm } from './CodeForm'
 import { PasswordForm } from './PasswordForm'
 
-export const ResetPw = (props: any) => {
+export const ResetPassword = (props: any) => {
 
   const stages = {
     REQUEST_LINK: 'REQUEST_LINK',
@@ -59,4 +59,4 @@ export const ResetPw = (props: any) => {
   );
 }
 
-export default ResetPw;
+export default ResetPassword;

@@ -1,10 +1,10 @@
 import React from 'react';
-import { ResetPw } from './ResetPw'
+import { ResetPassword } from './ResetPassword'
 
 export default function App () {
   return (
     <React.Fragment>
-      <ResetPw />
+      <ResetPassword />
     </React.Fragment>
   );
 }

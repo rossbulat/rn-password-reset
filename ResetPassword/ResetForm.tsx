@@ -71,7 +71,7 @@ export class ResetForm extends React.Component<any, any> {
                 </>
                 :
                 <Text style={formStyles.submitText} onPress={() => props.handleSubmit()}>
-                  Request Reset Link
+                  Request Reset Code
                 </Text>
               }
             </View>
