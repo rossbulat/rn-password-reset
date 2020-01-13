@@ -52,7 +52,7 @@ export class PasswordForm extends React.Component<any, any> {
         {props => (
           <>
             <Error error={this.state.serverError} />
-            <Note note='Please input a new password.' />
+            <Note note='Input new password.' />
             <TextInputWithIcon
               ionIcon='ios-lock'
               name='passwprd'

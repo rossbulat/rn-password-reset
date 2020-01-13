@@ -31,7 +31,6 @@ export const styles = StyleSheet.create({
     marginVertical: 10,
     fontWeight: '500',
   },
-
   submitText: {
     fontSize: 18,
     fontWeight: '600',

@@ -25,7 +25,7 @@ export class CodeForm extends React.Component<any, any> {
         }}
         validationSchema={Yup.object({
           code: Yup.string()
-            .required('Please input your verification code.'),
+            .required('Provide a valid verification code.'),
         })}
         onSubmit={(values, formikActions) => {
           this.setState({
@@ -42,7 +42,7 @@ export class CodeForm extends React.Component<any, any> {
         {props => (
           <>
             <Error error={this.state.serverError} />
-            <Note note='Please input the code sent to your email address.' />
+            <Note note='Input the code sent to your email address.' />
             <TextInputWithIcon
               name='code'
               ionIcon='ios-arrow-dropright-circle'

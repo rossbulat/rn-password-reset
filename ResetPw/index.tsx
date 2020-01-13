@@ -25,7 +25,7 @@ export const ResetPw = (props: any) => {
 
   return (
     <SafeAreaView style={styles.safeArea}>
-      <KeyboardAwareScrollView contentContainerStyle={styles.scrollContainer}>
+      <KeyboardAwareScrollView contentContainerStyle={styles.container}>
         <View style={formStyles.container}>
           <Text>
             Reset Your Password
