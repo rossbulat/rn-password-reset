@@ -10,16 +10,16 @@ import { PasswordForm } from './PasswordForm'
 
 export const ResetPassword = (props: any) => {
 
-  const stages = {
-    REQUEST_LINK: 'REQUEST_LINK',
-    VERIFY: 'VERIFY',
-    RESET: 'RESET',
-  };
+  enum stages {
+    REQUEST_LINK = 'REQUEST_LINK',
+    VERIFY = 'VERIFY',
+    RESET = 'RESET',
+  }
 
   const [stage, setStage] = useState(stages.REQUEST_LINK);
   const [email, setEmail] = useState(null);
 
-  const switchStage = (stage: string) => {
+  const switchStage = (stage: stages) => {
     setStage(stage);
   }
 
