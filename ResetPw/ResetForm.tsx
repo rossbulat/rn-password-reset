@@ -21,7 +21,7 @@ export class ResetForm extends React.Component<any, any> {
     return (
       <Formik
         initialValues={{
-          email: '',
+          email: 'me@email.com',
         }}
         validationSchema={Yup.object({
           email: Yup.string()

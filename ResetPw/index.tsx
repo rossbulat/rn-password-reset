@@ -27,7 +27,7 @@ export const ResetPw = (props: any) => {
     <SafeAreaView style={styles.safeArea}>
       <KeyboardAwareScrollView contentContainerStyle={styles.container}>
         <View style={formStyles.container}>
-          <Text>
+          <Text style={{ marginBottom: 30 }}>
             Reset Your Password
           </Text>
           {stage === stages.REQUEST_LINK &&

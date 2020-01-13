@@ -75,7 +75,7 @@ export class CodeForm extends React.Component<any, any> {
             </View>
             <View style={{ marginTop: 10 }}>
               <Text onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}>
-                Enter a Different Email Address
+                Go Back
               </Text>
             </View>
           </>
