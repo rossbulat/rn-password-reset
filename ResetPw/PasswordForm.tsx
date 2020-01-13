@@ -87,7 +87,7 @@ export class PasswordForm extends React.Component<any, any> {
             </View>
             <View style={{ marginTop: 10 }}>
               <Text onPress={() => this.props.switchStage(this.props.stages.REQUEST_LINK)}>
-                Enter a Different Email Address
+                Start Again
               </Text>
             </View>
           </>

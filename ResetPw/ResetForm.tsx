@@ -35,8 +35,10 @@ export class ResetForm extends React.Component<any, any> {
           });
 
           // server validation here
-          this.props.setEmail(values.email);
-          this.props.switchStage(this.props.stages.VERIFY);
+          setTimeout(() => {
+            this.props.setEmail(values.email);
+            this.props.switchStage(this.props.stages.VERIFY);
+          }, 1000);
         }}>
         {props => (
           <>
