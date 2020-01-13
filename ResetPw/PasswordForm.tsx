@@ -7,7 +7,6 @@ import { Note } from '../Form/Note'
 import { Error } from '../Form/Error'
 import { Text } from '../Text'
 import * as Yup from 'yup'
-import * as consts from '../../constants'
 import { Spinner } from '../Form/Spinner'
 
 export class PasswordForm extends React.Component<any, any> {
@@ -18,7 +17,7 @@ export class PasswordForm extends React.Component<any, any> {
     passwordReset: false,
   }
 
-  componentWillReceiveProps () {
+  componentDidMount () {
     this.setState({
       passwordReset: false,
     })
@@ -41,34 +40,14 @@ export class PasswordForm extends React.Component<any, any> {
             serverError: null
           });
 
-          fetch(consts.API_URL + '/auth/reset-password', {
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({
-              email: this.props.email,
-              password: values.password,
-            })
-          })
-            .then(res => res.json())
-            .then(data => {
-
-              formikActions.setSubmitting(false);
-              this.setState({
-                submitting: false,
-                passwordReset: true,
-              });
-
-              setTimeout(() => {
-                this.props.navigation.navigate('SignIn');
-              }, 2000);
-            })
-            .catch(e => {
-              formikActions.setSubmitting(false);
-              this.setState({ submitting: false });
+          // mimic server behaviour with timeout.
+          setTimeout(() => {
+            formikActions.setSubmitting(false);
+            this.setState({
+              submitting: false,
+              passwordReset: true,
             });
+          }, 1000);
         }}>
         {props => (
           <>

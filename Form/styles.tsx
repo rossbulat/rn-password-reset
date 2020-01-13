@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import { fontSizes, borderRadius } from '../theme'
 
 export const styles = StyleSheet.create({
   container: {
@@ -18,13 +17,13 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     marginHorizontal: 5,
     marginVertical: 10,
-    borderRadius: borderRadius.tab,
+    borderRadius: 6,
     paddingHorizontal: 14,
     paddingVertical: 8,
     minHeight: 46,
   },
   noteText: {
-    fontSize: fontSizes.secondary,
+    fontSize: 14,
     lineHeight: 20,
     textAlign: 'center',
     paddingHorizontal: 15,
@@ -44,7 +43,7 @@ export const styles = StyleSheet.create({
   buttonText: {
     padding: 10,
     fontWeight: '600',
-    fontSize: fontSizes.default,
+    fontSize: 16,
     textAlign: 'center'
   },
   error: {
@@ -55,17 +54,17 @@ export const styles = StyleSheet.create({
     alignContent: 'center',
   },
   errorText: {
-    color: '#ffdfdf',
-    fontSize: fontSizes.note,
+    color: '#f00',
+    fontSize: 14,
     fontWeight: 'bold',
   },
   errorIcon: {
-    color: '#ffdfdf',
+    color: '#f00',
     marginRight: 8,
   },
   inputLabel: {
     width: '100%',
-    fontSize: fontSizes.note,
+    fontSize: 14,
     fontWeight: 'bold',
     paddingHorizontal: 5,
     marginTop: 15,
@@ -85,7 +84,7 @@ export const styles = StyleSheet.create({
   },
   input: {
     paddingVertical: 13,
-    fontSize: fontSizes.default,
+    fontSize: 16,
     fontWeight: '600',
     flexGrow: 1,
   },

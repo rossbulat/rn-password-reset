@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { View, TextInput as TextInputNative } from 'react-native'
 import { styles } from './styles'
 import { ErrorMessage } from './ErrorMessage'

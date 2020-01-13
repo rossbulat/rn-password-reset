@@ -33,32 +33,11 @@ export class CodeForm extends React.Component<any, any> {
             serverError: null
           });
 
-          fetch(consts.API_URL + '/auth/verify-reset-password-code', {
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({
-              code: values.code,
-            })
-          })
-            .then(res => res.json())
-            .then(data => {
-              formikActions.setSubmitting(false);
-
-              if (data.ack === 'success') {
-                this.props.switchStage(this.props.stages.RESET);
-              } else {
-                this.setState({
-                  submitting: false,
-                  serverError: data.response.reason
-                })
-              }
-            })
-            .catch(e => {
-              formikActions.setSubmitting(false);
-            });
+          // mimic server behaviour with timeout.
+          setTimeout(() => {
+            formikActions.setSubmitting(false);
+            this.props.switchStage(this.props.stages.RESET);
+          }, 1000);
         }}>
         {props => (
           <>

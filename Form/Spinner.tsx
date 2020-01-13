@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Animated, Easing } from 'react-native'
-import SpinnerSVG from '../img/smallSpinner.svg'
+import SpinnerSVG from '../img/spinner.svg'
 
 export const Spinner = (props: any) => {
 

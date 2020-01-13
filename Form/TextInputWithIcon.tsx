@@ -1,4 +1,4 @@
-import React from 'React'
+import React from 'react'
 import { View, TextInput } from 'react-native'
 import { styles } from './styles'
 import Ionicons from 'react-native-vector-icons/Ionicons'

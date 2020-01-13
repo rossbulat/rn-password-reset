@@ -34,25 +34,9 @@ export class ResetForm extends React.Component<any, any> {
             serverError: null
           });
 
-          fetch(consts.API_URL + '/auth/reset-password-request', {
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json'
-            },
-            method: "POST",
-            body: JSON.stringify({
-              email: values.email,
-            })
-          })
-            .then(res => res.json())
-            .then(data => {
-              formikActions.setSubmitting(false);
-              this.props.setEmail(values.email);
-              this.props.switchStage(this.props.stages.VERIFY);
-            })
-            .catch(e => {
-              formikActions.setSubmitting(false);
-            });
+          // server validation here
+          this.props.setEmail(values.email);
+          this.props.switchStage(this.props.stages.VERIFY);
         }}>
         {props => (
           <>
