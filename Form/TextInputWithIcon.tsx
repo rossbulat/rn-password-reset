@@ -8,12 +8,9 @@ export const TextInputWithIcon = (props: any) => {
 
   const { ionIcon, name, ...rest } = props;
 
-  delete props['ionIcon'];
-  delete props['name'];
-
   return (
     <>
-      <View style={{ backgroundColor: '#f2f2f2', ...styles.inputWrap }}>
+      <View style={styles.inputWrap}>
         <View style={styles.inputIcon}>
           <Ionicons
             name={ionIcon}
@@ -21,9 +18,7 @@ export const TextInputWithIcon = (props: any) => {
             color='#ccc'
           />
         </View>
-        <TextInput
-          {...rest}
-        />
+        <TextInput {...rest} />
       </View>
       <ErrorMessage name={name} />
     </>

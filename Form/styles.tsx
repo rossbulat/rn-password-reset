@@ -78,6 +78,7 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignContent: 'center',
     alignItems: 'center',
+    backgroundColor: '#f2f2f2',
   },
   inputIcon: {
     marginRight: 14,

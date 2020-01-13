@@ -7,14 +7,9 @@ export const Note = (props: any) => {
   const { note } = props;
 
   return (
-    <View>
-      <Text style={{
-        ...styles.noteText
-      }}>
-        {note}
-      </Text>
-    </View>
-
+    <Text style={styles.noteText}>
+      {note}
+    </Text>
   );
 }
 

@@ -7,7 +7,7 @@ export const InputLabel = (props: any) => {
   const { label } = props;
 
   return (
-    <Text style={{ ...styles.inputLabel }}>
+    <Text style={styles.inputLabel}>
       {label}
     </Text>
   )

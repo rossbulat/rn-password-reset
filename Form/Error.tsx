@@ -13,7 +13,11 @@ export const Error = (props: any) => {
 
   return (
     <View style={styles.error}>
-      <Ionicons name='ios-warning' size={22} style={styles.errorIcon} />
+      <Ionicons
+        name='ios-warning'
+        size={22}
+        style={styles.errorIcon}
+      />
       <Text style={styles.errorText}>
         {error}
       </Text>
