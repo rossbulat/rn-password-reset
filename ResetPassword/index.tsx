@@ -6,7 +6,7 @@ import { styles } from './styles'
 import { styles as formStyles } from '../Form/styles'
 import { ResetForm } from './ResetForm'
 import { CodeForm } from './CodeForm'
-import { PasswordForm } from './PasswordForm'
+import { NewPasswordForm } from './NewPasswordForm'
 
 export const ResetPassword = (props: any) => {
 
@@ -44,7 +44,7 @@ export const ResetPassword = (props: any) => {
             />
           }
           {stage === stages.RESET &&
-            <PasswordForm
+            <NewPasswordForm
               stages={stages}
               switchStage={switchStage}
               email={email}

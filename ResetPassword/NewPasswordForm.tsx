@@ -9,7 +9,7 @@ import { Text } from '../Text'
 import * as Yup from 'yup'
 import { Spinner } from '../Form/Spinner'
 
-export class PasswordForm extends React.Component<any, any> {
+export class NewPasswordForm extends React.Component<any, any> {
 
   state = {
     submitting: false,
@@ -97,4 +97,4 @@ export class PasswordForm extends React.Component<any, any> {
   }
 }
 
-export default PasswordForm;
+export default NewPasswordForm;
