@@ -33,7 +33,7 @@ export class CodeForm extends React.Component<any, any> {
             serverError: null
           });
 
-          // mimic server behaviour with timeout.
+          // server validation in place of `setTimeout`
           setTimeout(() => {
             formikActions.setSubmitting(false);
             this.props.switchStage(this.props.stages.RESET);

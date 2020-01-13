@@ -34,7 +34,7 @@ export class ResetForm extends React.Component<any, any> {
             serverError: null
           });
 
-          // server validation here
+          // server validation in place of `setTimeout`
           setTimeout(() => {
             formikActions.setSubmitting(false);
             this.props.setEmail(values.email);

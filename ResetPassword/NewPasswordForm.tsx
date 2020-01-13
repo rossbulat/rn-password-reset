@@ -40,7 +40,7 @@ export class NewPasswordForm extends React.Component<any, any> {
             serverError: null
           });
 
-          // mimic server behaviour with timeout.
+          // server validation in place of `setTimeout`
           setTimeout(() => {
             formikActions.setSubmitting(false);
             this.setState({
